@@ -15,9 +15,13 @@ import { bindEvent, removeListeners, removeAllListeners } from 'stupid-events';
 
 const ele = document.querySelector('button');
 
-const removeListener = bindEvent(ele, 'click', (event, { stopPropagation, stopImmediatePropagation }) => {
-    console.log('trigger');
-});
+const removeListener = bindEvent(
+    ele, 
+    'click', 
+    (event, { stopPropagation, stopImmediatePropagation }) => {
+        console.log('trigger');
+    }
+);
 
 // remove event listener
 removeListener();
